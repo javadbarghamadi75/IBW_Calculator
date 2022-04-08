@@ -1,7 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(const MyApp());
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    systemNavigationBarColor: Colors.white, // navigation bar color
+    //statusBarColor: Colors.pink, // status bar color
+    //statusBarBrightness: Brightness.dark, //status bar brigtness
+    //statusBarIconBrightness: Brightness.dark, //status barIcon Brightness
+    systemNavigationBarDividerColor:
+        Colors.transparent, //Navigation bar divider color
+    systemNavigationBarIconBrightness: Brightness.dark, //navigation bar icon
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -11,7 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'IBW Calculator',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -24,7 +34,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'IBW Calculator Home'),
     );
   }
 }
